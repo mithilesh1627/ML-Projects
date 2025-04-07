@@ -38,7 +38,7 @@ def main():
     # creating the button for prediction
     if st.button("Diabetes Test Result"):
         diagnosis = diabetes_prediction([Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age])
-        st.toast(diagnosis,)
+        st.toast(diagnosis)
 
 
 if __name__ =="__main__":
