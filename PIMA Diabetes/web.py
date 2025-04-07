@@ -1,7 +1,10 @@
 import pickle
 import numpy as np
 import streamlit as st
-loader = pickle.load(open('training_model.sav', 'rb'))
+import os
+model_path = os.path.join(os.path.dirname(__file__), 'training_model.sav')
+with open(model_path, 'rb') as file:
+    loader = pickle.load(file)
 
 def diabetes_prediction(input_data):
     input_data_np_reshape=np.asarray(input_data).reshape(1,-1)
