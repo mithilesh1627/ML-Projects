@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 import streamlit as st
 
-loader = pickle.load(open('E:/2025/ML Project/PIMA Diabetes/training_model.sav', 'rb'))
+loader = pickle.load(open('PIMA Diabetes/training_model.sav', 'rb'))
 
 def diabetes_prediction(input_data):
     input_data_np_reshape=np.asarray(input_data).reshape(1,-1)
