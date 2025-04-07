@@ -2,10 +2,11 @@ import pickle
 import numpy as np
 import streamlit as st
 import os
-# column = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal,condition]
+#column = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal,condition]
 
 model_path = os.path.join(os.path.dirname(__file__), 'training_model.svg')
 
+st.title("Heart Disease Prediction Web App")
 with open(model_path, 'rb') as file:
     loader = pickle.load(file)
 
